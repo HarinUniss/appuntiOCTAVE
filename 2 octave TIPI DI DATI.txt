@@ -1,0 +1,153 @@
+11 /12 FATTO
+
+11 /13 		min 44
+
+11 /19 	
+
+
+
+	
+
+A = zeros ( 8 , 3 );	%inizzializzo una matrice di soli zeri
+
+for i = 1:8
+	if ( ((i-1)/4) >= 1  )	%imodifico la prima colonna
+		A(i,1)=1;
+	endif
+
+	if ( (rem(i-1,4)/2) >= 1 )	%imodifico la seconda colonna
+		A(i,2)=1;
+	endif
+	
+	if ( rem(i,2) >= 1 )	%modifico la terza colonna
+		A(i,3)=1;
+	endif
+endfor 
+
+%ottenere i valori della funzione calcolata
+
+B = zeros(8 , 1)	%inizzializzo un vettore riga a zero
+
+for i=1 : 8
+	B(i)= !( (!(A(i,1)*A(i,2)) | A(i,3) )
+endfor
+
+
+
+--------------------------------------------------------------------------
+
+tx =ty = linspace(-2,2,41);	%creo due vettori che vanno da -2 a 2 con 41 passi 
+
+[xx, yy] = meshgrid ( tx , ty );	%creo una griglia fatta con il passo di tx e ty
+^
+tz = (xx .^2 + yy .^2);		% creo laZ tramite la funzione Z=( x^2 + y^2 )
+
+surf( tx, ty, tz );		%stampo il pinano in 3D
+
+xlabel ("tx")	%scritta tx
+ylabel ("ty")	%scritta ty
+zlabel ("tz")	%scritta tz
+
+title ("#D Function");
+set (gca , "linewidth" , 4 , "fontsize" , 50 )
+
+
+
+------------------------------------------------------------------------------
+
+
+tx =ty = linspace(-5,5,101);	%creo due vettori che vanno da -5 a 5 con 101 passi 
+
+[xx, yy] = meshgrid ( tx , ty );	%creo una griglia fatta con il passo di tx e ty
+
+xlabel ("tx");		%scritta tx
+ylabel ("ty");		%scritta ty
+zlabel ("tz");		%scritta tz
+
+for sigmaX = 1: 0.5 : 3		%ciclo for che incrementa il sigmaX di 0.5 ogni ciclo fino a 3
+for sigmaX = 1: 0.5 : 3		%ciclo for che incrementa il sigmaX di 0.5 ogni ciclo fino a 3
+
+tz = exp(-0.5 .*((xx .^ 2) ./ (sigmaX * sigmaX) + (yy .^ 2) ./ (sigmaY * sigmaY) ));		%svolgo la funzione
+surf(tx,  ty, tz);	%stampo 
+
+%modifico il titolo 
+title( strcat("sigmaX=",num2str(sigmaX) , " sigmaY=" , num2str(sigmaY) ), "fontsize", 20
+
+pause (2)  %pausa di 2 secondi che mi permette di vedere l'evoluzione dell'immagine
+endfor
+endfor
+
+
+------------------------------------------------------------------------------------
+tx =ty = linspace(-10,10,101);	%creo due vettori che vanno da -10 a 10 con 101 passi 
+
+[tx, ty] = meshgrid ( tx , ty );	%creo una griglia fatta con il passo di tx e ty
+
+tz1 = -tx -2 * ty;		%identifico il primo piano
+tz2 = 0.5 *(1 -tx -3 * ty);	%identifico il secondo piano 
+tz3 = 2 -2* tx -ty;		%identifico il terzo piano 
+
+figure;
+hold on;		%fa in modo che il grafico venga scritto sulo stesso disegno
+
+mesh(tx , ty , tz1);
+mesh(tx , ty , tz2);
+mesh(tx , ty , tz3);
+
+set(gca , "linewidth", 4 , "fontsize", 50 )
+
+
+xlabel ("tx");		%scritta tx
+ylabel ("ty");		%scritta ty
+zlabel ("tz");		%scritta tz
+
+
+------------------------------------------------------------------------------------
+
+z = 3+2i
+
+a = real(z)	%estraggo la parte reale
+
+b = imag(z)	%estraggo la parte immaginaria
+
+%faccio le operazioni 
+exp(a)*( cos(b) + i * sin(b) )
+
+exp(z)
+
+
+------------------------------------------------------------------------------------
+
+z1 = 4+3i
+z2 = 2-2i
+
+z3= z1+z2
+
+%cerco di tracciarlo vettorialmente
+
+plot( z1, '*' , z2 '*' ,"markersize", 30 ,  z3 '*')
+ 
+
+
+set(gca , "linewidth", 4, "fontsize" 40 )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

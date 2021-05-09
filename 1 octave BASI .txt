@@ -1,0 +1,497 @@
+
+LANCIARE OCTAVE DALLA SHELL 	digitare octave 
+
+USCIRE DAL PROGRAMMA 		quit 	,	exit	
+
+% QUESTO è UN COMMENTO 
+
+RISULTATI VENGONO MEMORIZZATI IN UNA VARIABILE CHIAMATA 	ans
+
+
+OPERAZIONE BASE
+
+ 	OPERAZIONE 		SIMBOLO		USO
+
+	Elevamento a potenza 	^		a^b
+	
+	Moltiplicazione		* 		a*b
+
+	Divisione	
+	da destra a sinistra	/ 		a/b
+	da sinistra a destra	\		b\a ATTTTTTTENZIONE QUESTO è A DIVISO B!!!
+		
+	Addizione 		+ 		a+b
+	
+	Sottrazione 		-		a-b
+
+	Operatoore Assegnazione	=		a=4+3
+
+
+FUNZIONI MATEMATICHE
+	
+	Resto divisione 	rem(x,y)
+
+	Esponente 		exp(x)
+	Logaritmo naturale	log(x)
+	Logaritmo base 10	log10(x)
+	
+	Fattoriale		fact(x)
+	Inverso 		inv(x)
+	RadiceQuadrata		sqrt(x)
+
+L'ANGOLO INTERNO ALLE FUNZIONI TRIGONOMETRICHE è ESPRESSO IN RADIANTI 
+	Coseno 			cos(x)
+	Seno 			sin(x)
+	Tangente		tan(x)
+	ArcoSeno 		acos(x)
+	ArcoCoseno		asin(x)
+	ArcTangente		atan(x)
+
+
+COSTANTI PREDEFINITE
+
+	PiGreco 		pi
+
+
+ELIMINARE VARIABILI
+	Una variavile 		clear nomeVariabile
+	
+	Piu variabili	 	clear nomeVariabile1 nomeVariabile2
+
+	Tutte le Variabili 	clear
+
+
+ELENCARE LISTA VARIABILI
+	Solo il nome 		who
+
+	Tutte le info 		whos
+
+
+PULIRE LA LAVAGNA 		clc
+
+
+INFORMAZIONI SU UN COMANDO 	help nomeComando
+
+
+SCRIVERE SULLA STESSA RIGA PIU OPERAZIONI
+	alla fine di ogni operazione aggiungere il PuntoEVirgola ;
+
+	NB questa operazione non fa nemmeno visualizzare il risultato 
+	   delle operazioni con il punto e virgola davanti
+
+
+VISUALIZZARE IL CONTENUTO DI UNA VARIABILE	disp(nomeVariabile)
+	
+
+UTILIZZARE LA RIGA SUCCESSIVA PER LA STESSA ISTRUZIONE ANDANDO A CAPO 		...
+
+----------------------------------------------------------------------------------------------------------
+**********************************************************************************************************
+----------------------------------------------------------------------------------------------------------
+TIPI DI VARIABILI
+
+VARIABILI NUMERICHE 
+	Classe(e funzione) 	Valore Minimo 		Valore Massimo 		Bytes
+	double() 		-1.79e+308 		1.70e+308 		8
+	single()		-3.40e+038 		3.40e+038 		4
+	int8()			-128 			127 			1
+	int16()			-32768 			32767 			2
+	int32() 		-2.14e+09 		2.14+09 		4
+	int64()			-9.22e+18 		9.22+e18 		8
+	uint8() 		0 			255 			1
+	uint16() 		0 			65535 			2
+	uint32() 		0 			4.29+09 		4
+	uint64() 		0 			1.84+19 		8
+
+
+
+CAMBIARE FORMATO DI UNA VARIABILE 	format tipoDiDato
+	
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+VARIABILI DI TIPO LOGICO 	
+	restituisce 1 se vero 	0 se falso
+	
+	MAGGIORE 	> 
+	MINORE 		<
+	MAGGIORE/UGUALE	>=
+	MINORE/UGUALE	<=
+
+	UGUALE		==
+	NON UGUALE	~=
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+OPERATORI LOGICI 
+
+	CONFRONTARE I SINGOLI ELEMENTI 
+		AND logico		&	 
+		OR logico		|	
+		NOT Negazione logica	~
+
+	CONFRONTA UN INSIEME CON UN ALTRO 
+		AND short-circuit	&&
+		OR short-circuit	||
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+CREARE ALGORITMI 
+
+PRENDERE UN VALORE DA TASTIERA  input('inserire un messaggio che chieda di inserire qualcosa:')
+
+VISUALIZZARE QUALCOSA A SCHERMO 	disp(x)
+
+CICLO FOR
+
+	-for i =1:10
+	-	%operazioni
+	-end
+
+	SE L'INCREMENTO NON è UNITARIO USARE QUESTA  FORMULA
+
+		-for var = contatoreIziale : incremento : contatoreFinale
+		-	%operazioni
+		-end
+		
+
+CICLO WHILE 
+
+	-while condizione
+	-	%operazioni 
+	-end
+
+	CICLO WHILE CON OPERATORI LOGICI 
+
+	       -while ( condizione1 ) && ( condizione2 )
+	       -	%operazioni 
+	       -end
+
+
+CICLO SWITCH
+	
+	-switch variabile
+	-	case '1'
+	-		%operazione
+	-	case '2'
+	-		%operazione
+	-	case '3'
+	-		%operazione
+	-	otherwise
+	-		%operazine da fare in altri casi 
+	-end
+
+
+CICLO IF
+	
+	-if condizione
+	-	%operazioni
+	-end
+
+
+CICLO IF-ELSE
+	
+	-if condizione 
+	-	%operazione se condizione vera
+	-else 
+	-	%operazione se condizione falsa
+	-end
+
+
+CICLO IF-ELSEIF-ELSE
+	-if primaCondizione 
+	-	%operazione1 se condizione vera
+	-elseif secondaCondizione 
+	-	%operazione2 se condizione vera
+	-else 
+	-	%operazione se condizione falsa
+	-end
+
+----------------------------------------------------------------------------------------------------------
+**********************************************************************************************************
+----------------------------------------------------------------------------------------------------------
+
+ARRAY DI TIPO CARATTERE
+
+STRINGA DI CARATTERI 			stringa=’ciao come va?’
+
+SOTTOMATRICE STRINGA CARATTERI		
+	>> stringa(1:4)
+	ans = ciao	
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+MATRICI
+
+GENERO UNA MATRICE 3X3
+	
+	>> A=[ 1 2 3 ; 4 5 6 ; 7 8 9 ]
+		A =
+		   1   2   3
+		   4   5   6
+		   7   8   9
+
+	>> A=[ 1 , 2 , 3 ; 4 , 5 , 6 ; 7 , 8 , 9 ]
+		A =
+		   1   2   3
+		   4   5   6
+		   7   8   9
+
+
+VISUALIZZARE UN SINGOLO ELEMENTO  	NomeMatrice( riga , colonna )
+
+
+VISUALIZZARE UN INTERA RIGA 		NomeMatrice( riga , : )
+
+
+VISUALIZZARE UN INTERA COLONNA		NomeMatrice( : , colonna )
+
+
+ESTRARRE UNA SOTTOMATRICE		NomeMatrice( riga : riga : etc , colonna : colonna : etc )
+	
+	>>  B=A(2:3,1:2)
+	B =
+
+	   4   5
+	   7   8	
+
+
+MATRICE QUADRATA 			zeros( numero ) 
+
+MATRICE DI SOLI ZERI 			zeros( nRighe , nColonne )
+
+MATRICE DI SOLI UNO 			ones( nRighe , nColonne )
+
+MATRICE IDENTITA			eye( nRighe , nColonne )
+
+MATRICE MAGICA				magic( numero )
+
+DIMENSIONE MATRICE 			size( matrice )
+
+NUMERO ELEMENTI MATRICE 		numel( matrice )
+
+ELIMINAZIONE RIGA 			matrice( nRiga , : ) = [] 
+
+ELIMINAZIONE COLONNE 			matrice( : , nRiga ) = []
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+APROFONDIMENTO SULLE MATRICI 
+
+	VETTORE A INTERVALLI
+		 vettore = [ -2 : 0.01 : 2]	%genero un vettore che va da -2 a 2 con degli intervalli di 0.01
+	
+	
+	VETTORE LINEA CON NUMERI DA 1 A 5 CON PASSO DI NUMERI NATURALI 
+		vettore= [1:5]
+	
+	VETTORE LINEA CON PASSO SCELTO DI 0.5
+		vettore  = [1: 0.5: 5]
+
+	TRASPOSTA DI UNA MATRICE   C=B'		matriceTrasposta = matriceDaTrasporre'
+
+	RANGO DI UNA MATRICE 	rank(matrice)
+
+	DETERMINANTE MATRICE 	det(matrice)
+
+	INVERSA MATRICE		inv(matrice)
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+OPERAZIONI CON SCALARI 
+	
+	SOMMA PER UNO SCALARE		scalare+Matrice
+		
+	MOLTIPLICAZIONE SCALARE 	scalare*Matrice 	equivale   	Matrice.*scalare
+	
+	OPERAZIONE PER OGNI ELEMENTO DELLA MATRICE
+	MOLTIPLICAZIONE			.*   	 Matrice.*scalare 
+
+	DIVISIONE TRA MATRICI 		./	Matrice./scalare   diverso da 	scalare./Matrice
+
+	ELEVAZIONE			.^ 	Matrice.^scalare
+
+OPERAZIONI TRA MATRICI 
+
+	MOLTIPLICAZIONE				A*B
+	MOLTIPLICAZIONE ELEMENTO PER ELEMENTO 	A.*B
+
+	DIVISIONE				A/B
+	DIVISIONE ELEMENTO PER ELEMENTO 	A./B
+
+	ELEVAZIONE 				A^B
+	ELEVAZIONE ELEMENTO PER ELEMENTO 	A.^B
+
+----------------------------------------------------------------------------------------------------------
+**********************************************************************************************************
+----------------------------------------------------------------------------------------------------------
+
+FUNZIONI UTILI UTILIZZABILI SIA SU ELEMENTI SINGOLI CHE MATRICI 
+	Media 			mean( x y z )		
+	Massimo			max( x y z )
+	Minimo			min( x y z ) 	
+	
+	Somma 			sum( x y z )
+	Somma Cumulativa	cumsum( x y z )     %fornisce i risultati delle operazioni svolte in serie
+	
+
+	DeviazioneStandard	std( x y z )
+	
+
+
+----------------------------------------------------------------------------------------------------------
+**********************************************************************************************************
+----------------------------------------------------------------------------------------------------------
+
+PROIEZIONE GRAFICA
+	stampa grafico 			plot( eleminti ,'Colore')	plot( tabella , 'r')	
+
+	stampa pallini 			plot(eleminti,'ColoreSimbolo')	plot( tabella , 'ro')
+
+	COLORI r=rosso 	y=giallo    k=nero   b=blu    g=verde
+
+STAMPARE DEI PUNTI SPECIFICANDO IL SIMBOLO
+
+	plot( z1, '$' , z2 '#' , z3 '*@' , "markersize", 40,)
+
+IMPOSTO VISUALIZZAZIONE  DEGLI ASSI 
+	axis([-5 7  -5 7])	%visualizzo l'asse X eanche quello Y da -5 a 7 
+
+
+PROIEZIONE GRAFICO IN 3D
+	
+	tx =ty = linspace(-2,2,41);	%creo due vettori che vanno da -2 a 2 con 41 passi 
+
+	[xx, yy] = meshgrid ( tx , ty );	%creo una griglia fatta con il passo di tx e ty
+	
+	tz = sviluppo di Z	%devo utilizzare xx e yy
+	
+	surf( tx, ty, tz );		%stampo il pinano in 3D
+
+
+PROIEZIONE DI UN HISTOGRAMMA 	
+	stampa istogramma 		hist( elementi )
+	
+	specificare numero barre 	hist( elementi , numeroBarre)
+
+	
+
+CHIUDERE TUTTI I GRAFICI 		close all
+
+PIU GRAFICI IN UNA TABELLA 		hold on 
+
+VISUALIZZARE ANCHE UNA GRIGLIA		grid on 
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ESTETICA 
+
+	SPESSORE LINEA 		plot (linea , "linewidth",4) 		%spessore linee di 4
+
+	SETTARE IL GRAFICO DEGLI ASSI 
+		GRAFICO ASSI 	gca
+		set(gca,"linewidth",4 )		%spessore assi di 4
+		set(gca, "fontsize", 20 )	%dimensione caratteri a 20
+
+	VISUALIZZARE IL GRAFICO IN UN INTERVALLO SPECIFICO 
+		axis([-1,1, -1,2])		%visualizzo l'intervallo da -1 a - sul asse X e da -1 a 2 sull,asse Y
+
+
+	AGGIUNGERE UNA LEGGENDA CHE INDICA QUALCOSA	legend(x)
+
+		Aumentare lo spessore riquadro leggenda	e il font	set (legend("x"), "linewidth", 4 ,"fontsize", 20) 
+
+		Posso anche attribuire una coatante alla leggenda
+			h= legend("x")		% quando scrivo "h" sarà come scrivere legend("x")
+		
+
+	AGGIUNGERE UN TITOLO 
+		title ("delvo dare un titolo")
+	
+----------------------------------------------------------------------------------------------------------
+**********************************************************************************************************
+----------------------------------------------------------------------------------------------------------
+FUNZIONI NUMERI CASUALI
+
+	POSITIVI TRA ZERO E UNO
+	Numero Casuale 			rand( )
+	Matrice di valori random	rand( nRighe , nColonne )
+	
+
+	IN UN INTERVALLO POSITIVO
+	Numero Casuale   		rand( [valoreMinimo valoreMassimo] )	
+	Matrice di valori random	rand( [valoreMinimo valoreMassimo], nRighe , nColonne )
+
+	IN UN INTERVALLO ANCHE NEGATIVO
+	Tra -0.5 e 0.5 			rand()-0.5
+	Tra -10 e 10			( rand()-0.5 )*20
+
+	INTERI IN UN INTERVALLO
+	Numero Casuale Intero  		randi( [valoreMinimo valoreMassimo] )	
+	Matrice di valori random	randi( [valoreMinimo valoreMassimo], nRighe , nColonne )
+
+
+DISTRIBUZIONE DI TIPO GAUSIANA 		randn(nRighe , nColonne)	
+
+	Gausiana intervallo piu ampio 	rand(nRighe , nColonne)*10  %l'intervallo andrà da +-30 e qualche valore fino a +-60  
+
+
+----------------------------------------------------------------------------------------------------------
+**********************************************************************************************************
+----------------------------------------------------------------------------------------------------------
+NUMERI COMPLESSI 	
+	DEFINIZIONI
+	 	z2 = 1 + 3*j
+		z2 = 1 + 3i
+
+	PRODOTTO 
+		z2*z3	
+
+	ESPONENZIALE
+		exp(z2)
+FUNZIONI CON NUMERI COMPLESSI 
+
+	Estrarre la parte reale 		real(z)
+
+	Estrarre la parte immaginaria 		imag(z)
+
+	
+
+
+----------------------------------------------------------------------------------------------------------
+
+
+
+	
+POLINOMII
+	P = [ 3 2 0 4 ]   %octave lo vede come 3x^3 +2x^2 + 0x +4 = 0 
+
+GENERARE IL POLINOMIO IN FORMA CANONICA
+	polyout(P, 'x')
+
+
+SOLUZIONI DI UN POLINOMIO
+	roots(P)	
+
+
+
+DERIVATA POLINOMIO
+	polyder(P)
+
+
+INTEGRALE POLINOMIO
+ 	polyint(P)
+
+CALCOLARE L'INTEGRALE DI UNA FUNZIONE IN UN INTERVALLO
+	quad( "f", 3, 5)	%calcolo intagrale funzione nell'intervallo 3 5 
+
+
+VALUTARE IL POLINOMIO 
+	polyval( nomePolinomio , variabileValutazione ) 	polyval(P , x)
+
+
+
+
+
+
+
+
+
+
+
+
+
