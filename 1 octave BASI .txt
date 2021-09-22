@@ -488,7 +488,12 @@ VALUTARE IL POLINOMIO
 
 
 
-
+x = linspace(-2,2,5);
+h = [1 2];
+y = [-h(2) -h(1) 0 h(1,1:2)];
+[xx, yy] = meshgrid (x, y);
+z = (xx + yy);
+surf (x,y,z)
 
 
 
